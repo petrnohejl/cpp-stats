@@ -1,0 +1,51 @@
+--------------------------------------------------------------------------------
+
+Stats
+(c) 2008 Petr Nohejl
+
+Stats je program na vytváření statistik zdrojového kódu jazyka C/C++. Aplikace
+prochází zdrojové soubory v aktuálním adresáři a ve všech podadresářích a
+zobrazuje informace o počtu klíčových slov, operátorů, identifikátorů, řádků,
+nevyužitých řádků, číselných literálů, délce určitých slov, délce všech řetězců
+a délce komentářů.
+
+--------------------------------------------------------------------------------
+
+Instalace:
+
+Stats je konzolová aplikace (spouští se v příkazovém řádku) a je napsána v
+jazyce Python 2.6. Pro její spuštění je třeba mít nainstalován interpret jazyka
+Python, který lze stáhnout na adrese: www.python.org.
+
+--------------------------------------------------------------------------------
+
+Ovládání:
+
+stats -k - vypíše počet klíčových slov mimo komentáře, řetězce a direktivy
+
+stats -o - vypíše počet operátorů mimo komentáře, řetězce a direktivy, nepočítá:
+           přetypování, operátor čárky, sizeof, ternární operátor ? :,
+           závorky () []
+
+stats -ik - vypíše počet identifikátorů včetně klíčových slov mimo komentáře,
+            řetězce a direktivy
+
+stats -w pattern - vypíše počet výskytů textového řetězce "pattern"
+
+stats -c - vypíše délku komentářů v bytech
+
+stats -s - vypíše délku řetězců v bytech mimo komentáře a direktivy
+
+stats -l - vypíše počet řádků
+
+stats -u - vypíše počet nevyužitých řádků (obsahujících pouze bílé znaky
+           nebo komentáře)
+
+stats -n - vypíše počet číselných literálů mimo komentáře, řetězce a direktivy
+
+stats action -p - volitelný přepínač -p umožňuje výpis pouze názvů souborů bez
+                  úplné cesty
+
+stats --help - zobrazí nápovědu
+
+--------------------------------------------------------------------------------
